@@ -396,6 +396,32 @@
   }
 
   /* ---------------------------------------------------------------------
+     Map embeds
+     Google clips its place card inside a short mobile iframe, so phones get
+     a clean coordinate pin instead of the (cropped) business card.
+     --------------------------------------------------------------------- */
+  function initMapEmbeds() {
+    const embeds = $$("iframe[data-map-embed]");
+    if (!embeds.length) return;
+    const wide = embeds[0].dataset.srcWide;
+    const small = embeds[0].dataset.srcSmall;
+    if (!wide || !small) return;
+    const mq = window.matchMedia("(max-width: 640px)");
+    const apply = () => {
+      const mode = mq.matches ? "small" : "wide";
+      const src = mode === "small" ? small : wide;
+      embeds.forEach((frame) => {
+        if (frame.dataset.currentMode === mode) return;
+        frame.dataset.currentMode = mode;
+        frame.src = src;
+      });
+    };
+    apply();
+    if (mq.addEventListener) mq.addEventListener("change", apply);
+    else if (mq.addListener) mq.addListener(apply);
+  }
+
+  /* ---------------------------------------------------------------------
      Misc
      --------------------------------------------------------------------- */
   function initMisc() {
@@ -414,6 +440,7 @@
     initCollections();
     initProduct();
     initForm();
+    initMapEmbeds();
     initMisc();
   });
 })();

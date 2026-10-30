@@ -31,4 +31,6 @@ These are **placeholders** for design review only. They must be replaced with ph
 | `craft.jpg` | 37485313 | https://www.pexels.com/photo/37485313/ |
 | `model-saree.jpg` | 7123306 | https://www.pexels.com/photo/7123306/ |
 
-The monogram in `assets/logo.svg` is original artwork created for this build and should be replaced with the boutique's own logo.
+The Ganesha–lotus logo (`assets/img/logo-source.jpg`, re-exported as `assets/logo.png`) was supplied by the boutique and is not covered by the Pexels licence below.
+
+`boutique.jpg` is a photograph of the shop supplied by Jaya's Collection (photographer credit: A Vishik). It is not a Pexels image.

@@ -294,9 +294,9 @@ const STORE = {
   phoneHref: "tel:+919831917368",
   email: "jayalahiri1972@gmail.com",
   address: {
-    en: "Ballygunge New Market (AC), 1st Floor, Shop 56, near Gariahat More, Kolkata 700019",
+    en: "Ballygunge New Market (AC), 1st Floor, Shop 56, near Gariahat More, Kolkata 700029",
     bn: "বালিগঞ্জ নিউ মার্কেট (এসি), ১ম তলা, দোকান ৫৬, গড়িয়াহাট মোড়ের কাছে, কলকাতা ৭০০০১৯"
   },
-  map: "https://www.google.com/maps/search/?api=1&query=Jaya%27s+Collection+Ballygunge+New+Market+Kolkata",
+  map: "https://www.google.com/maps/place/Jaya%27s+Collection/@22.5212639,88.3648577,17z/data=!4m6!3m5!1s0x3a02777497674ea1:0xa027e36d886186dc!8m2!3d22.5212639!4d88.3648577!16s%2Fg%2F11mzmw6kbf",
   facebook: "https://www.facebook.com/people/Jayas-Collection/61576726888077/"
 };
