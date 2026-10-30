@@ -661,6 +661,14 @@ html[data-lang="bn"] .reviews__meta{font-size:10px;letter-spacing:.08em}
 .footer__cta p{margin-bottom:18px;font-size:.84rem;line-height:1.7;color:rgba(248,243,236,.6)}
 .footer__bottom{margin-top:64px;border-top:1px solid rgba(248,243,236,.12);padding:22px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(248,243,236,.38)}
 .footer__bottom .bn{letter-spacing:.03em;text-transform:none;font-size:11px}
+.footer__credit{color:rgba(248,243,236,.55)}
+.footer__credit a{
+  color:rgba(248,243,236,.68);padding-bottom:2px;
+  border-bottom:1px solid rgba(233,209,154,.42);
+  transition:color .3s,border-color .3s;
+}
+.footer__credit a:hover{color:var(--gold-light);border-color:var(--gold-light)}
+.footer__credit strong{font-weight:600}
 
 /* WhatsApp float ---------------------------------------------------------- */
 .wa-float{
@@ -769,6 +777,7 @@ html[data-lang="bn"] .reviews__meta{font-size:10px;letter-spacing:.08em}
   .hero__meta{margin-top:24px;padding-top:18px}
   .wa-float{width:46px;height:46px;right:12px;bottom:14px}
   .wa-float svg{width:22px;height:22px}
+  .footer{padding-bottom:72px}
 }
 @media (max-width:640px){
   .split__badge{display:none}
@@ -781,6 +790,7 @@ html[data-lang="bn"] .reviews__meta{font-size:10px;letter-spacing:.08em}
   .brand__script{font-size:22px}
   .brand__caps{font-size:8.5px;letter-spacing:.3em}
   .footer__col a{display:inline-block;padding:5px 0}
+  .footer__col .btn{padding:0 24px}
   .mobile-menu__foot .lang button{min-height:40px;min-width:34px;display:inline-flex;align-items:center;justify-content:center}
   .link-arrow{padding-top:9px;padding-bottom:9px}
   .contact-card a,.info-item a{display:inline-block;padding:4px 0}
@@ -809,6 +819,7 @@ html[data-lang="bn"] .reviews__meta{font-size:10px;letter-spacing:.08em}
   .form .btn{width:100%}
   .footer__grid{grid-template-columns:1fr}
   .footer__bottom{font-size:8px;letter-spacing:.1em}
+  .footer__credit{font-size:9px;letter-spacing:.08em}
   .page-hero{padding-top:calc(var(--header-h) + 50px);padding-bottom:60px;min-height:42vh}
   .page-hero__title{font-size:clamp(2.2rem,9vw,3rem)}
   .announce__inner{line-height:1.4;padding:6px 0}
