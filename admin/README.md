@@ -5,7 +5,7 @@ A small PHP admin panel for cPanel / Hostinger shared hosting. The client can lo
 ## How it works
 
 1. Products, categories and store details live in `admin/data/store.json`.
-2. Every save rewrites `js/data.js` in exactly the format the public site already expects.
+2. Every save rewrites `js/data.js` in exactly the format the public site already expects, and refreshes `sitemap.xml` with the current product URLs.
 3. The public HTML/JS pages are unchanged — they keep reading the same global `PRODUCTS`, `CATEGORIES`, `WHATSAPP_NUMBER` and `STORE` variables.
 4. Uploaded photos go to `assets/img/` and are referenced as `assets/img/filename.jpg`.
 

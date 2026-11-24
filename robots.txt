@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /references/
+
+Sitemap: https://jayascollection.shop/sitemap.xml

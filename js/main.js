@@ -8,6 +8,7 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   const root = document.documentElement;
+  const SITE_URL = "https://jayascollection.shop";
 
   /* ---------------------------------------------------------------------
      Language
@@ -269,6 +270,18 @@
       document.title = `${bn ? product.name.bn : product.name.en} — Jaya's Collection`;
       const descMeta = document.querySelector('meta[name="description"]');
       if (descMeta) descMeta.setAttribute("content", t(product.desc));
+
+      const pageUrl = SITE_URL + "/product.html?p=" + encodeURIComponent(product.slug);
+      const canonical = $("#canonical");
+      if (canonical) canonical.href = pageUrl;
+      const ogUrl = $("#ogUrl");
+      if (ogUrl) ogUrl.setAttribute("content", pageUrl);
+      const ogTitle = $("#ogTitle");
+      if (ogTitle) ogTitle.setAttribute("content", document.title);
+      const ogDesc = $("#ogDescription");
+      if (ogDesc) ogDesc.setAttribute("content", t(product.desc));
+      const ogImage = $("#ogImage");
+      if (ogImage) ogImage.setAttribute("content", SITE_URL + "/" + product.image.replace(/^\/+/, ""));
 
       const related = PRODUCTS.filter((p) => p.slug !== product.slug && p.category === product.category)
         .concat(PRODUCTS.filter((p) => p.slug !== product.slug && p.category !== product.category))

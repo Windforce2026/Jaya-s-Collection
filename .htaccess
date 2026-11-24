@@ -1,0 +1,24 @@
+# Jaya's Collection — Hostinger / Apache rules
+# Enable free SSL in hPanel first, then force HTTPS there (or uncomment below).
+
+Options -Indexes
+
+RewriteEngine On
+
+# Prefer the non-www canonical domain.
+RewriteCond %{HTTP_HOST} ^www\.jayascollection\.shop$ [NC]
+RewriteRule ^(.*)$ https://jayascollection.shop/$1 [R=301,L]
+
+# Uncomment after SSL is active if you prefer to force it here instead of hPanel:
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://jayascollection.shop/$1 [R=301,L]
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|jpg|jpeg|png|webp|gif|svg|ico)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  # The admin regenerates this file on every save — never cache it.
+  <Files "data.js">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+  </Files>
+</IfModule>

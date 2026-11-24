@@ -165,9 +165,10 @@ Once the listing has reviews, change the heading and lead back to a “read our 
 - [ ] Send 3–5 real Google/Facebook reviews if quoted cards are wanted in the Reviews section.
 - [ ] Confirm the price-on-enquiry wording (no prices are shown anywhere).
 - [ ] Confirm the PIN code (see open questions below).
-- [ ] Add the real domain to `<link rel="canonical">` and `og:url` on every page.
+- [x] Domain set to `https://jayascollection.shop` in canonical tags, `og:url`, `og:image`, JSON-LD and `sitemap.xml`.
+- [x] `sitemap.xml`, `robots.txt` and `.htaccess` added (non-www canonical, asset caching, no-cache for `js/data.js`).
+- [ ] Activate SSL in hPanel, force HTTPS, then submit `sitemap.xml` in Google Search Console and update the Facebook page website link.
 - [ ] Add a Google Analytics / Meta Pixel tag if the client wants tracking.
-- [ ] Submit the site to Google Search Console and update the Facebook page website link.
 - [ ] Test the WhatsApp links on a real phone (the `wa.me` link opens the app; desktop opens WhatsApp Web).
 - [ ] Check every image loads and every internal link resolves.
 
@@ -200,7 +201,7 @@ Before publishing, the client should confirm the points below.
 8. **Delivery charges and timelines** — confirm whether delivery is free, chargeable, insured, and typical delivery time. The announcement bar currently says "Delivery across India" (the safer wording). If delivery is genuinely free, change it to "Complimentary delivery across India".
 9. **Email address** — confirm `jayalahiri1972@gmail.com` is the address to publish.
 10. **Founder credit** — the story page signs off as "Jaya's Collection" rather than a personal name. Add the founder's name and a line of biography if desired.
-11. **Domain** — supply the final domain for canonical URLs and social previews.
+11. **Domain** — resolved: `https://jayascollection.shop` (non-www). Already applied to canonical tags, social previews and the sitemap.
 
 ---
 
@@ -242,6 +243,9 @@ jaya/
 ├─ craft.html
 ├─ journal.html
 ├─ contact.html
+├─ sitemap.xml        ← 6 main pages + 18 product URLs
+├─ robots.txt         ← allows all, blocks /admin/ and /references/
+├─ .htaccess          ← non-www canonical + asset caching
 ├─ css/
 │  └─ styles.css
 ├─ admin/             ← optional PHP product manager (cPanel/Hostinger)
@@ -255,7 +259,6 @@ jaya/
 │  └─ .htaccess       ← no-cache rule for data.js
 ├─ assets/
 │  ├─ logo.png
-│  ├─ favicon-32.png
 │  ├─ favicon-32.png
 │  ├─ apple-touch-icon.png
 │  └─ img/            ← replace with real photography
