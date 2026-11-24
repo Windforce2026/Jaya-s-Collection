@@ -1,0 +1,5 @@
+# Created by the admin's first-run setup — contains the password hash.
+/admin/data/config.json
+
+# Temporary files used for atomic writes.
+*.tmp
